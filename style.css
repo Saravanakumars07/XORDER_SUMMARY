@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
 :root {
   --pale-blue: #e0e8ff;
   --bright-blue: #3829e0;
@@ -15,17 +16,22 @@
 
 body {
   font-family: 'Red Hat Display', sans-serif;
-  background: var(--pale-blue) url('./assets/pattern-background-desktop.svg') no-repeat center/cover;
+  background-color: var(--pale-blue);
+  background-image: url('./assets/pattern-background-desktop.svg'); /* Desktop bg */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* so footer sits below */
   padding: 1.5rem;
 }
 
 @media (max-width: 450px) {
   body {
-    background: url('./assets/pattern-background-mobile.svg') center/cover;
+    background-image: url('./assets/pattern-background-mobile.svg'); /* Mobile bg */
   }
 }
 
@@ -33,12 +39,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .container {
   background: white;
   border-radius: 20px;
   max-width: 400px;
+  width: 100%;
   text-align: center;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(56, 41, 224, 0.2);
@@ -46,6 +54,7 @@ body {
 
 .container > img {
   width: 100%;
+  display: block;
   border-radius: 20px 20px 0 0;
 }
 
@@ -77,11 +86,13 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-align: left;
 }
 
-.plan-text strong {
+.plan-text h3 { /* Added style for h3 */
   color: var(--dark-blue);
   font-weight: 900;
+  font-size: 1rem;
 }
 
 .plan-text p {
@@ -131,13 +142,15 @@ body {
 .cancel-order:hover {
   color: var(--dark-blue);
 }
+
 .attribution {
-font-size: 0.8rem;
-text-align: center;
-margin-top: 2rem;
-color: var(--desaturated-blue);
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--desaturated-blue);
 }
+
 .attribution a {
-color: var(--bright-blue);
-text-decoration: none;
+  color: var(--bright-blue);
+  text-decoration: none;
 }

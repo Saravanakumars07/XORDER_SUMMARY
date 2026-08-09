@@ -25,7 +25,7 @@ body {
 
 @media (max-width: 450px) {
   body {
-    background-image: url('./assets/pattern-background-mobile.svg') center/cover;
+    background: url('./assets/pattern-background-mobile.svg') center/cover;
   }
 }
 
@@ -130,4 +130,14 @@ body {
 
 .cancel-order:hover {
   color: var(--dark-blue);
+}
+.attribution {
+font-size: 0.8rem;
+text-align: center;
+margin-top: 2rem;
+color: var(--desaturated-blue);
+}
+.attribution a {
+color: var(--bright-blue);
+text-decoration: none;
 }

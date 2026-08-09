@@ -17,7 +17,7 @@
 body {
   font-family: 'Red Hat Display', sans-serif;
   background: var(--pale-blue) url('./assets/pattern-background-desktop.svg') no-repeat top center/cover;
-   min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ body {
   padding: 1.5rem;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   body {
     background-image: url('./assets/pattern-background-mobile.svg');
   }
